@@ -13,51 +13,35 @@ cell_pavardes_amzius = struct2cell(pavardes_amzius);
 cpar = reshape(cell_pavardes_amzius, [1, 2, 23]);
 amzius_pavardes = cell2struct(cpar, {'pavardes', 'amzius'}, 2);
 
-a = input('Iveskite kintamaji a:    ');
-b = input('Iveskite kintamaji b:    ');
-c = input('Iveskite kintamaji c:    ');
-
-if a < 0
-    a_maziau_nulio = 1;
-else
-    a_maziau_nulio = 0;
-end
-
-if b < 0
-    b_maziau_nulio = 1;
-else
-    b_maziau_nulio = 0;
-end
-
-if c < 0
-    c_maziau_nulio = 1;
-else
-    c_maziau_nulio = 0;
-end
-
-if (a ~= 0) && (b ~= 0) && (c ~= 1)
-    switch a_maziau_nulio + b_maziau_nulio + c_maziau_nulio
-        case 3
-            a_kvad = a^2; b_kvad = b^2; c_kvad = c^2;
-        case 2
-            if a > 0
-                a_kub = a^3; b_kvad = b^2; c_kvad = c^2;
-            elseif b > 0
-                a_kvad = a^2; b_kub = b^3; c_kvad = c^2;
-            elseif c > 0
-                a_kvad = a^2; b_kvad = b^2; c_kub = c^3;
-            end
-        case 1
-            if c < 0
-                a_kub = a^3; b_kub = b^3; c_kvad = c^2;
-            elseif b < 0
-                a_kub = a^3; b_kvad = b^2; c_kub = c^3;
-            elseif a < 0
-                a_kvad = a^2; b_kub = b^3; c_kub = c^3;
-            end
-        case 1
-            a_kub = a^3; b_kub = b^3; c_kub = c^3;
+a = input('Iveskite a:  ');
+if (a ~= 0)
+    if a < 0
+        a = a^2;
+        disp(a)
+    else
+        a = a^3;
+        disp(a)
     end
-else
-    disp()
+end
+
+b = input('Iveskite b:  ');
+if (b ~= 0)
+    if b < 0
+        b = b^2;
+        disp(b)
+    else
+        b = b^3;
+        disp(b)
+    end
+end
+
+c = input('Iveskite c:  ');
+if (c ~= 1)
+    if c < 0
+        c = c^2;
+        disp(c)
+    else
+        c = c^3;
+        disp(c)
+    end
 end
