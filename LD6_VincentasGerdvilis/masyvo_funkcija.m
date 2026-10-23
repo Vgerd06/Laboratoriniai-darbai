@@ -1,4 +1,4 @@
-function [eil_sk stulp_sk N] = MasGen(mas)
+function [mas] = MasGen(eil_sk, stulp_sk, N)
 % MASGEN Si funkcija sugeneruoja norimo dydzio atsitiktiniu naturaliuju skaiciu
 % masyva.
 
