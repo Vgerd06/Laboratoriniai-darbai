@@ -6,4 +6,4 @@ function [mas] = MasGen(eil_sk, stulp_sk, N)
 
 end
 
-pause
+MasGen(1,2,3)
