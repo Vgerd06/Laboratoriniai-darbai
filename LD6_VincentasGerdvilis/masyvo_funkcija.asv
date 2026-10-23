@@ -1,7 +1,0 @@
-function [mas] = MasGen(eil_sk, stulp_sk, N)
-% MASGEN Not
-    mas = 1 + (N-1)*rand(eil_sk, stulp_sk);
-
-end
-
-MasGen(1,2,3)
